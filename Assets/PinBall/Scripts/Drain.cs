@@ -4,10 +4,10 @@ using UnityEngine;
 public class Drain : MonoBehaviour
 {
 
-    [SerializeField] private Transform spawnTransfrom;
+	[SerializeField] private Transform spawnTransfrom;
 	[SerializeField] private GameObject ballPrefab;
 
-    private BoxCollider trigger;
+	private BoxCollider trigger;
 
 	private void Awake()
 	{
@@ -19,8 +19,15 @@ public class Drain : MonoBehaviour
 	{
 		if (other.GetComponent<Ball>() && GameManager.BallCount > 0)
 		{
-			GameManager.BallCount -= 1;
-			Instantiate(ballPrefab, spawnTransfrom.position, Quaternion.identity);
+			if (GameManager.BallCount > 0)
+			{
+				GameManager.BallCount -= 1;
+				Instantiate(ballPrefab, spawnTransfrom.position, Quaternion.identity);
+			}
+			else
+			{
+				GameManager.GlobalGameOver.Invoke();
+			}
 		}
 		Destroy(other.gameObject);
 	}
