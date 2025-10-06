@@ -23,6 +23,8 @@ public class Drain : MonoBehaviour
 			{
 				GameManager.BallCount -= 1;
 				Instantiate(ballPrefab, spawnTransfrom.position, Quaternion.identity);
+
+				GameManager.GlobalLoseBall.Invoke();
 			}
 			else
 			{

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1627284966112485379}
   - component: {fileID: 3905405110921231545}
   - component: {fileID: 605153670668779257}
+  - component: {fileID: 2324133201079321732}
   m_Layer: 0
   m_Name: SlingShot
   m_TagString: Untagged
@@ -1066,81 +1067,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 0}
   m_VersionIndex: 4065
   m_IsSelectable: 1
-  m_SelectedFaces: 21000000220000001800000023000000190000001a0000001b0000001c0000001d0000001e0000001f00000020000000
-  m_SelectedEdges:
-  - a: 105
-    b: 106
-  - a: 106
-    b: 107
-  - a: 107
-    b: 105
-  - a: 111
-    b: 112
-  - a: 112
-    b: 113
-  - a: 113
-    b: 111
-  - a: 51
-    b: 52
-  - a: 52
-    b: 53
-  - a: 53
-    b: 51
-  - a: 117
-    b: 118
-  - a: 118
-    b: 119
-  - a: 119
-    b: 117
-  - a: 57
-    b: 58
-  - a: 58
-    b: 59
-  - a: 59
-    b: 57
-  - a: 63
-    b: 64
-  - a: 64
-    b: 65
-  - a: 65
-    b: 63
-  - a: 69
-    b: 70
-  - a: 70
-    b: 71
-  - a: 71
-    b: 69
-  - a: 75
-    b: 76
-  - a: 76
-    b: 77
-  - a: 77
-    b: 75
-  - a: 81
-    b: 82
-  - a: 82
-    b: 83
-  - a: 83
-    b: 81
-  - a: 87
-    b: 88
-  - a: 88
-    b: 89
-  - a: 89
-    b: 87
-  - a: 93
-    b: 94
-  - a: 94
-    b: 95
-  - a: 95
-    b: 93
-  - a: 99
-    b: 100
-  - a: 100
-    b: 101
-  - a: 101
-    b: 99
-  m_SelectedVertices: 690000006a0000006b0000006f0000007000000071000000330000003400000035000000750000007600000077000000390000003a0000003b0000003f00000040000000410000004500000046000000470000004b0000004c0000004d0000005100000052000000530000005700000058000000590000005d0000005e0000005f000000630000006400000065000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &6408588897101164505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1243,3 +1172,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &2324133201079321732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5470391205476678670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73704abe0f920b478b397627aec45f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorePerHit: 20
