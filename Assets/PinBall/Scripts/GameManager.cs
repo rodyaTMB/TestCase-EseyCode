@@ -11,12 +11,16 @@ public class GameManager : MonoBehaviour
     public static int BallCount = 3;
     public static int Score;
 
-    [SerializeField] private TMP_Text scoreUI;
+    [SerializeField] private TMP_Text scoreUIGameOver;
+    [Space]
+    [SerializeField] private TMP_Text scoreUIMain;
     [SerializeField] private TMP_Text ballCountUI;
 
 	private void Awake()
 	{
-        UpdateScoreUI();
+		RebutParametrs();
+
+		UpdateScoreUI();
         UpdateBallCount();
 
 
@@ -26,11 +30,18 @@ public class GameManager : MonoBehaviour
 
 	private void UpdateScoreUI()
     {
-        scoreUI.text = $"Score: {Score}";
+        scoreUIMain.text = $"Score: {Score}";
+		scoreUIGameOver.text = $"Score: {Score}";
     }
 	private void UpdateBallCount()
     {
 		ballCountUI.text = $"Balls: {BallCount}";
     }
+
+    private void RebutParametrs()
+    {
+        BallCount = 3;
+        Score = 0;
+	}
 
 }

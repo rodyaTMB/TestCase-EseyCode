@@ -8,8 +8,12 @@ public class SceneController : MonoBehaviour
 	[SerializeField] private Button restart;
 	[SerializeField] private Button resum;
 	[SerializeField] private Button exit;
+	[Space]
+	[SerializeField] private Button exitGameOver;
+	[SerializeField] private Button restartGameOver;
 
 	[SerializeField] GameObject pausePanel;
+	[SerializeField] GameObject gameOverPanel;
 
 	private bool isPause;
 
@@ -19,6 +23,11 @@ public class SceneController : MonoBehaviour
 		restart.onClick.AddListener(RestartGame);
 		resum.onClick.AddListener(PauseGame);
 		exit.onClick.AddListener(QuitGame);
+
+		exitGameOver.onClick.AddListener(QuitGame);
+		restartGameOver.onClick.AddListener(RestartGame);
+
+		GameManager.GlobalGameOver.AddListener(GameOver);
 	}
 
 	private void RestartGame()
@@ -47,5 +56,10 @@ public class SceneController : MonoBehaviour
 			isPause = false;
 			pausePanel.SetActive(false);
 		}
+	}
+	private void GameOver()
+	{
+		gameOverPanel.SetActive(true);
+		Time.timeScale = 0f;
 	}
 }

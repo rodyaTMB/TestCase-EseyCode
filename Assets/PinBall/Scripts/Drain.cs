@@ -17,7 +17,7 @@ public class Drain : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.GetComponent<Ball>() && GameManager.BallCount > 0)
+		if (other.GetComponent<Ball>())
 		{
 			if (GameManager.BallCount > 0)
 			{
